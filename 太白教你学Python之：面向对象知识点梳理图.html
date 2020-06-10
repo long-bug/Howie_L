@@ -1,0 +1,357 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>太白教你学Python之：面向对象知识点梳理图</title>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="56don8p14ofsgjvgba05ddfc6u">太白教你学Python之：面向对象知识点梳理图</a>
+</h1>
+<div align="center" class="globalOverview">
+<img src="%E5%A4%AA%E7%99%BD%E6%95%99%E4%BD%A0%E5%AD%A6Python%E4%B9%8B%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86%E5%9B%BE_files/images/%E5%A4%AA%E7%99%BD%E6%95%99%E4%BD%A0%E5%AD%A6Python%E4%B9%8B%EF%BC%9A%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86%E5%9B%BE.jpg"></div>
+<h2 class="topic">
+<a name="6k79mejgf2pt6cu7lquppo7f9m">类,对象的定义</a>
+</h2>
+<h3 class="topic">
+<a name="5srvi4ep13nc6smerskhq040g0">&nbsp;类:具有相同属性和方法的一类事物.</a>
+</h3>
+<h3 class="topic">
+<a name="66flqmsllngnoeqde8aqnjcmug">&nbsp;对象:类的具体表现.</a>
+</h3>
+<h2 class="topic">
+<a name="1ndjlcinglhrtvi2okg2b2mmur">类名</a>
+</h2>
+<h3 class="topic">
+<a name="039vb9ftv7l17apvk1777gp337">&nbsp;查询类中的所有内容（静态属性（变量），动态属性方法等）:类名.__dict__</a>
+</h3>
+<h3 class="topic">
+<a name="3fhcf7e7oftafftjsa2oiist1d">&nbsp;操作类中的某个公有静态属性（变量）:  类名.字段名称</a>
+</h3>
+<h3 class="topic">
+<a name="7osb3mgrrb3fhqgcjmrj1htfnf">&nbsp;&nbsp;1. 通过万能的点 对类的属性进行增删改查</a>
+</h3>
+<h3 class="topic">
+<a name="3jb0rmcqu6dg8eabbct6f3nsnd">&nbsp;&nbsp;2. 可以在类外部,内部,派生类中进行操作</a>
+</h3>
+<h3 class="topic">
+<a name="3loesos6rcp7hnmuaio8pna4jo">&nbsp;执行类中的方法: 一般是通过类名可以调用类方法，和静态方法。</a>
+</h3>
+<h2 class="topic">
+<a name="7kmlj4tmi9ukqvo5ala1p3og1h">面向对象的三大特性:</a>
+</h2>
+<h3 class="topic">
+<a name="1ej2ctkrd6bgs4j999dvssl7pl">&nbsp;继承</a>
+</h3>
+<h3 class="topic">
+<a name="693q32slm7jq1lehohu22jkasb">&nbsp;&nbsp;单继承</a>
+</h3>
+<h3 class="topic">
+<a name="1rfsdv6qgnhns3bvskheihumv9">&nbsp;&nbsp;&nbsp;执行父类的静态变量：</a>
+</h3>
+<h3 class="topic">
+<a name="3b0qub58d2rn6krp1k26o9ncef">&nbsp;&nbsp;&nbsp;&nbsp;如果子类没有同名变量则可以直接  . 寻找</a>
+</h3>
+<h3 class="topic">
+<a name="4oum28ibfrd24uj8o2l7s1j412">&nbsp;&nbsp;&nbsp;&nbsp;如果子类有存在与父类同名的静态变量则通过super().area,或者直接父类.变量名的方法查找</a>
+</h3>
+<h3 class="topic">
+<a name="3qp4u7hjern0ofi5l44cvip3sn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<h3 class="topic">
+<a name="569uu4gogr5phh7s6235kjk4qi">&nbsp;&nbsp;&nbsp;在子类中既执行本类又执行父类的方法</a>
+</h3>
+<h3 class="topic">
+<a name="1m5o4u3gm5b7arlhdq71pvijql">&nbsp;&nbsp;&nbsp;&nbsp;父类名.方法名(self,父类此方法所需参数)</a>
+</h3>
+<h3 class="topic">
+<a name="58o6f2pirdhphe5v569uhtr5pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<h3 class="topic">
+<a name="06en6c7eocdi6b6lo6080vpsum">&nbsp;&nbsp;&nbsp;&nbsp;super().方法名(父类此方法所需参数)</a>
+</h3>
+<h3 class="topic">
+<a name="27v3ferfo2f94oqb22vg2gvl15">&nbsp;&nbsp;&nbsp;只执行父类的方法：子类中不能定义同名的方法。</a>
+</h3>
+<h3 class="topic">
+<a name="7lv0tudi8c134kp2e3tq8p4re7">&nbsp;&nbsp;多继承</a>
+</h3>
+<h3 class="topic">
+<a name="0f87nb99i3p2ucphh0nog2mn6t">&nbsp;&nbsp;&nbsp;经典类: 深度优先，一条路走到黑.</a>
+</h3>
+<h3 class="topic">
+<a name="1gc2ddkjro462quk4iap0cp112">&nbsp;&nbsp;&nbsp;新式类:C3算法，通过mro方法可以查出父类的继承顺序。</a>
+</h3>
+<h3 class="topic">
+<a href="https://www.cnblogs.com/jin-xin/articles/10274734.html" name="7g8ap58vk1baelr9c5foul4o11">&nbsp;&nbsp;&nbsp;&nbsp;新式类的继承具体算法链接：</a>
+</h3>
+<h3 class="topic">
+<a name="49bh08n12emjukpkgh7gf87qck">&nbsp;&nbsp;继承的优点：</a>
+</h3>
+<h3 class="topic">
+<a name="5t8o4u8meji4a81s40ofaqlde0">&nbsp;&nbsp;&nbsp;1，提高代码的复用性。</a>
+</h3>
+<h3 class="topic">
+<a name="7nvd67jt115815apam2qokcvjh">&nbsp;&nbsp;&nbsp;2，提高代码的维护性。</a>
+</h3>
+<h3 class="topic">
+<a name="5g1tfqnna4686npqrh48b79lc0">&nbsp;&nbsp;&nbsp;3，让类与类产生关系，使得代码更具关联性,增加耦合性（双刃剑）。</a>
+</h3>
+<h3 class="topic">
+<a name="0kh7fnbvtem73k5a3b7ho1c9hs">&nbsp;&nbsp;继承的缺点：</a>
+</h3>
+<h3 class="topic">
+<a name="748fa03gik1kdhhka5ltiuhepr">&nbsp;&nbsp;&nbsp;类的耦合性增强了。</a>
+</h3>
+<h3 class="topic">
+<a name="4tvdu6eme2gb74v9ak094up7m9">&nbsp;封装</a>
+</h3>
+<h3 class="topic">
+<a name="6qcite6lu31k2i5g05nnbuvk34">&nbsp;&nbsp;给对象封装属性</a>
+</h3>
+<h3 class="topic">
+<a name="7mv217v23f91mfi1hsace1ecsr">&nbsp;&nbsp;给一个类封装静态变量及方法</a>
+</h3>
+<h3 class="topic">
+<a name="7latjc5vlgfovepds5gira4h7u">&nbsp;&nbsp;私有成员:私有静态字段,私有方法,私有属性:__变量</a>
+</h3>
+<h3 class="topic">
+<a name="54cj51qqcn5fu8an66j0v6airc">&nbsp;&nbsp;&nbsp;私有成员:类只要加载到内存,他会将所有的私有成员变成: _类名__变量名</a>
+</h3>
+<h3 class="topic">
+<a name="7ufqdknb0cl2esl9269o19p28b">&nbsp;&nbsp;&nbsp;何处调用: 只能在类内部调用,不能在派生类或者类外部调用</a>
+</h3>
+<h3 class="topic">
+<a name="6gg3do5b5u6u57irlo1frhsb6v">&nbsp;多态</a>
+</h3>
+<h3 class="topic">
+<a name="50c08qqqii3a3pav6thjmhnlto">&nbsp;&nbsp;Python默认支持多态，即一个变量可以代指不同的类型，不用规定死。比如函数的形参 func(a): 对于形参a来说，他可以代指任意数据类型。</a>
+</h3>
+<h3 class="topic">
+<a name="6bjpalmkpk2g6i38r33o2d2pml">&nbsp;&nbsp;python崇尚鸭子类型：长得像鸭子，他就是鸭子。</a>
+</h3>
+<h3 class="topic">
+<a name="7ds3aidlkp8eb2mqrhtlffln62">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<h2 class="topic">
+<a name="44btm22ds89fj0mssahkaufii7">为什么要有面向对象</a>
+</h2>
+<h3 class="topic">
+<a name="6n1679b8vk4u2uo3h3ohnmi4p5">&nbsp;1，面向对象是将相关的功能（函数）的集合，让代码更加合理的分类。</a>
+</h3>
+<h3 class="topic">
+<a name="0kgie4n0qhjdn8nrdep181dnr0">&nbsp;2，站在上帝的角度去考虑问题，他实际是构造了一个公共模板，通过这个公共模板实例化N多个对象，使代码具有多样性，规范性。</a>
+</h3>
+<h2 class="topic">
+<a name="5ocfbvm50taur3thbecbnoek5o">对象</a>
+</h2>
+<h3 class="topic">
+<a name="1j9rt42dq50r4jgjftpr6peb9k">&nbsp;1. 如何产生一个对象: 类名()  实例化过程</a>
+</h3>
+<h3 class="topic">
+<a name="6arl5vh1bkf56gm1usqngs739m">&nbsp;2. 实例化对象发生了三件事:</a>
+</h3>
+<h3 class="topic">
+<a name="5ve2thr9ksk8a6r724a8bj7rdb">&nbsp;&nbsp;1. 类名()自动执行object类中的__new__方法,产生并返回一个对象空间</a>
+</h3>
+<h3 class="topic">
+<a name="5g8rl87oih1oq3tlcb8ntgo1oc">&nbsp;&nbsp;2. 执行__init__方法,将对象空间传给self.</a>
+</h3>
+<h3 class="topic">
+<a name="1si3f4hu6bbpdciqdftmohhk9d">&nbsp;&nbsp;3. 在__init__方法中给对象封装基础属性</a>
+</h3>
+<h3 class="topic">
+<a name="7cajikkbl06n0kkdbokkkde7bp">&nbsp;3. 对象查询对象的所有属性：obj.__dict__</a>
+</h3>
+<h3 class="topic">
+<a name="2fac92tac86p0qv31ega7oo287">&nbsp;4. 对象操作对象属性(增删改查):obj1.属性名</a>
+</h3>
+<h3 class="topic">
+<a name="367sdn1vmcjrua5fbmno3uraeb">&nbsp;5. 对象查询类中的静态变量:obj1.变量名</a>
+</h3>
+<h3 class="topic">
+<a name="220cv4m210iakcfue7aqcm1fv6">&nbsp;6. 对象可以调用类的实例方法:obj1.函数名(self)</a>
+</h3>
+<h2 class="topic">
+<a name="7bsmrp3uo6uuek4cigj9kh58n1">类的结构</a>
+</h2>
+<h3 class="topic">
+<a name="44nh6i7e8tpb2nn9prdsm3v54d">&nbsp;第一部分:静态字段(静态变量).</a>
+</h3>
+<h3 class="topic">
+<a name="5ch71n6p6ce3tiacbv7fbnchlq">&nbsp;&nbsp;私有静态字段:__变量名</a>
+</h3>
+<h3 class="topic">
+<a name="165sibsd22153nn0lgkuccbsav">&nbsp;&nbsp;公有静态字段</a>
+</h3>
+<h3 class="topic">
+<a name="5r2mgcn2e97o9sprj7504vgdkm">&nbsp;第二部分:动态方法.</a>
+</h3>
+<h3 class="topic">
+<a name="2utv9pugu90p5jksirh2hmscdo">&nbsp;&nbsp;实例方法：func(self),通过对象调用</a>
+</h3>
+<h3 class="topic">
+<a name="4huur4ak873iurs0grn9o387oa">&nbsp;&nbsp;私有方法:__函数名，类内部调用</a>
+</h3>
+<h3 class="topic">
+<a name="08aq165200aep6sraie024rptc">&nbsp;&nbsp;属性:@property:将方法伪装成属性,为了更合理.</a>
+</h3>
+<h3 class="topic">
+<a name="4bgvcg9db97fd04h7l9qmmroji">&nbsp;&nbsp;特殊方法</a>
+</h3>
+<h3 class="topic">
+<a name="10u6amht9d61m997ntlbkpbmbu">&nbsp;&nbsp;&nbsp;__init__:初始化方法，此方法主要是给对象封装属性</a>
+</h3>
+<h3 class="topic">
+<a name="3804b8igru705qdddef4bjmsbd">&nbsp;&nbsp;&nbsp;__new__:构造方法产生并返回对象的方法，通过类名+()触发</a>
+</h3>
+<h3 class="topic">
+<a name="29gg96uke667j6j66o7tovmrg9">&nbsp;&nbsp;&nbsp;__call__方法:通过实例化的对象()触发.</a>
+</h3>
+<h3 class="topic">
+<a name="6d1g1i574qsc63p0ta0kt0pcqf">&nbsp;&nbsp;&nbsp;__item__系列:</a>
+</h3>
+<h3 class="topic">
+<a name="29j5225enj3epn56jlq0ptf7av">&nbsp;&nbsp;&nbsp;&nbsp;__getitem__:obj['name'] 就会触发__getitem__方法,并将'name'传入此方法中</a>
+</h3>
+<h3 class="topic">
+<a name="61qn1sttia0df5g3cq659nmb93">&nbsp;&nbsp;&nbsp;&nbsp;__setitem__</a>
+</h3>
+<h3 class="topic">
+<a name="4ak0f3i7jcnn97bpfkkir299hm">&nbsp;&nbsp;&nbsp;&nbsp;__delitem__</a>
+</h3>
+<h3 class="topic">
+<a name="1hml3b96ggcksh61m5q7amukqd">&nbsp;&nbsp;&nbsp;__len__方法：len(对象)  触发</a>
+</h3>
+<h3 class="topic">
+<a name="4rk7kgbg4nnn0vs7r23fr4m86v">&nbsp;&nbsp;&nbsp;__hash__方法： hash(对象)  触发</a>
+</h3>
+<h3 class="topic">
+<a name="3dd6020prgqt08n7c84fj119n4">&nbsp;&nbsp;&nbsp;__str__方法：print(对象)或者str(对象)或者格式化输出'%s' % 对象  触发</a>
+</h3>
+<h3 class="topic">
+<a name="5dfcltreg7j6etnil91bjbmaik">&nbsp;&nbsp;&nbsp;__repr__方法：repr(对象)或者格式化输出'%s' % 对象  触发</a>
+</h3>
+<h3 class="topic">
+<a name="59rqimejahstn61fmvvfh8e4dd">&nbsp;&nbsp;&nbsp;__eq__方法：对象 == 对象  触发</a>
+</h3>
+<h3 class="topic">
+<a name="0nmri2qt9s8ora1h8o9rk59g2n">&nbsp;&nbsp;&nbsp;上下文管理器相关，对一个对象进行with操作时触发这两个方法</a>
+</h3>
+<h3 class="topic">
+<a name="3tgujcdktaf833img6kfbp4bup">&nbsp;&nbsp;&nbsp;&nbsp;__enter__方法</a>
+</h3>
+<h3 class="topic">
+<a name="6js23qgcls7je29osnj9ba70da">&nbsp;&nbsp;&nbsp;&nbsp;__exit__方法</a>
+</h3>
+<h3 class="topic">
+<a name="368lktp4k3k903rhk93s4eemfp">&nbsp;&nbsp;&nbsp;&nbsp;代码示例</a>
+</h3>
+<h3 class="topic">
+<a name="7ugh65p13pr0b053glufuuiuhc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<h3 class="topic">
+<a name="23s66jje1v7pl9m9qotdlm7dnk">&nbsp;&nbsp;类方法</a>
+</h3>
+<h3 class="topic">
+<a name="2skmvk9l49acq1ivefhmevpc0r">&nbsp;&nbsp;&nbsp;@classmethod(cls): 类名去调用,他会将类空间传给cls</a>
+</h3>
+<h3 class="topic">
+<a name="6o2eqvp1hv9bu05s501klh79s3">&nbsp;&nbsp;&nbsp;类方法的作用：就是想要类名调用，去操控这个公共模板的内容（属性，方法等）</a>
+</h3>
+<h3 class="topic">
+<a name="6hpqplnn1bq38gqu3eo1lekvlk">&nbsp;&nbsp;静态方法</a>
+</h3>
+<h3 class="topic">
+<a name="2e3q8mvkmduft2iqkobgj00i36">&nbsp;&nbsp;&nbsp;@staticmethod():不用传入类空间,对象空间的方法</a>
+</h3>
+<h2 class="topic">
+<a name="79n3peab0u5k7s8ap6im77g3hf">私有成员</a>
+</h2>
+<h3 class="topic">
+<a name="5hu901v1iupi84gljg79ntbp3s">&nbsp;类的成员按照公有私有可以分为两种：私有成员，公有成员。</a>
+</h3>
+<h3 class="topic">
+<a name="2hep95naa5jofui3ibvuimotbk">&nbsp;&nbsp;私有成员分为三种</a>
+</h3>
+<h3 class="topic">
+<a name="3htirvg7otmpm9r5gnf76l347r">&nbsp;&nbsp;&nbsp;私有类的静态属性</a>
+</h3>
+<h3 class="topic">
+<a name="2r6k8fq2d48d6molgg88vqegfd">&nbsp;&nbsp;&nbsp;私有对象属性</a>
+</h3>
+<h3 class="topic">
+<a name="7230q8gbubcfhejqsi60tokhpd">&nbsp;&nbsp;&nbsp;私有方法</a>
+</h3>
+<h3 class="topic">
+<a name="3ui29eem4u719vvuav01ggsvjq">&nbsp;&nbsp;代码示例</a>
+</h3>
+<h3 class="topic">
+<a name="5r1s2pjmvegknf1g807hjfoiku">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<h3 class="topic">
+<a name="6kdrqistcjqkj9ni7uj024gug1">&nbsp;&nbsp;私有成员：只可以类中访问，不能再类外部以及派生类中访问。</a>
+</h3>
+<h2 class="topic">
+<a name="4rbcihinahvu4fq2sqo4p735og">空间,以及查找顺序</a>
+</h2>
+<h3 class="topic">
+<a name="4reg0m15e23njfj33esqak9nvh">&nbsp;类名（）会产生一个对象空间obj，此空间中有类对象指针，对象可以通过这个类对象指针找到从属的类。</a>
+</h3>
+<h3 class="topic">
+<a name="3ve9k550udnbg5mca2k8qqva2g">&nbsp;对象查询属性:先从对象空间去找,对象空间没有,通过类对象指针去所属类去找</a>
+</h3>
+<h3 class="topic">
+<a name="5l0dop3g41iej1kgi06pq9jmmk">&nbsp;类查找顺序:先从本类去找,如果没有从父类去找,.......</a>
+</h3>
+<h2 class="topic">
+<a name="2e7ovk2bjevgqtq2botktvrrur">类与类之间的关系</a>
+</h2>
+<h3 class="topic">
+<a name="17pii0mju4th6c0lu89tqqmqi3">&nbsp;类与类之间原本没有关系，但是为了程序的拓展，增加代码之间的耦合性，可以让类产生关系。</a>
+</h3>
+<h3 class="topic">
+<a name="2d6lagvles8u4lfqlpfr079a2d">&nbsp;&nbsp;依赖关系</a>
+</h3>
+<h3 class="topic">
+<a name="4ttgkmut7hc5lv41j7lpgqi5cp">&nbsp;&nbsp;&nbsp;依赖关系是类与类之间耦合性最低的关系，就是将一个类的类名或者对象传入到另一个类的方法中</a>
+</h3>
+<h3 class="topic">
+<a name="5b0a47tvov6ov25gden5si9sth">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<h3 class="topic">
+<a name="75kapipcgai5gnpdmmktr5d5an">&nbsp;&nbsp;关联，聚合，组合关系</a>
+</h3>
+<h3 class="topic">
+<a name="7nnrtltj59qih9ogl6ub5g4p9i">&nbsp;&nbsp;&nbsp;给一个类的对象封装一个属性，这个属性是另个类的对象</a>
+</h3>
+<h3 class="topic">
+<a name="3ghhl16o925uf6orpi2fhq8gbn">&nbsp;&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<h3 class="topic">
+<a name="54n16g2rdmcs2qc9a2e59b0s0a">&nbsp;&nbsp;实现，继承关系</a>
+</h3>
+<h3 class="topic">
+<a name="6keqpr8b120bo9cod6556i0h6f">&nbsp;&nbsp;&nbsp;实现也是继承关系，这个会在面向对象的三大特性中详细说明。</a>
+</h3>
+<h2 class="topic">
+<a name="4cpgjv9a7ql5hi8s2q4de0klil">类的约束</a>
+</h2>
+<h3 class="topic">
+<a name="2co37lt4n1rh412u7sol6ihnin">&nbsp;方式一：提取⽗类. 然后在⽗类中定义好⽅法. 在这个⽅法中什么都不⽤⼲. 就抛⼀个异常就可以了. 这样所有的⼦类都必须重写这个⽅法. 否则. 访问的时候就会报错. </a>
+</h3>
+<h3 class="topic">
+<a name="3a9qr44ld2sd3o3kre0pm8r08i">&nbsp;&nbsp;</a>
+</h3>
+<h3 class="topic">
+<a name="1m93sniq4cispbjvbmrjofkiq8">&nbsp;方式二：使⽤元类来描述⽗类. 在元类中给出⼀个抽象⽅法. 这样⼦类就不得不给出抽象⽅法的具体实现. 也可以起到约束的效果.</a>
+</h3>
+<h3 class="topic">
+<a name="2ug71dfosuebcig69n0qrof1dg">&nbsp;&nbsp;</a>
+</h3>
+<h2 class="topic">
+<a name="0kaavvpgj5g8pin3rl4urprl8l"></a>
+</h2>
+</body>
+</html>
